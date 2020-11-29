@@ -108,9 +108,7 @@ const Assignment = () => {
             image={<img src={user.avatar} alt={user.login} />}
             key={user.login}
             data-testid={`card_${i}`}
-            onClick={() => {
-              handleUserClick(user.login)
-            }}
+            onClick={() => {handleUserClick(user.login)}}
           />
         ))}
       </CardGrid>

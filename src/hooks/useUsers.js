@@ -38,7 +38,7 @@ const useUsers = () => {
 //useEffet without stop parameter
   useEffect(() => {
     fetchMore()
-  }, [])
+  },[]);
 
   return [{ users, loading, error }, { fetchMore }]
 }
