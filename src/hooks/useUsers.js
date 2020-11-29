@@ -35,10 +35,10 @@ const useUsers = () => {
       dispatch({ type: 'ERROR', error: e })
     }
   }
-
+//useEffet without stop parameter
   useEffect(() => {
     fetchMore()
-  },[])
+  },[]);
 
   return [{ users, loading, error }, { fetchMore }]
 }
