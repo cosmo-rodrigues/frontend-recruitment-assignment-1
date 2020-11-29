@@ -99,7 +99,7 @@ describe('Assignment', () => {
 
   it(`should fetch ${config.USERS_PER_REQUEST} github users on load`, async () => {
     const usersMock = mockRequests(1)
-    const { getByTestId } = renderPage()
+    const { getByTestId } = renderPage(<CardGrid />)
 
     await waitForDomChange(getByTestId('card_grid'))
 
