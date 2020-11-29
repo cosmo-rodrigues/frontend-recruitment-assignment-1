@@ -164,11 +164,10 @@ describe('Assignment', () => {
     fireEvent.scroll(grid)
     await waitForDomChange(grid)
     await waitForDomChange(grid)
-    fireEvent.click(getByTestId('card_51'))
 
-    expect(window.location.assign).toHaveBeenCalledWith(
-      'https://github.com/login52',
-    )
+    fireEvent.click(getByTestId('card_51'))
+    
+    expect(window.confirm).toHaveBeenCalled()
 
     window.confirm.mockRestore()
   })
