@@ -76,8 +76,8 @@ const formatStats = ({ repos, gists }) => [
 ]
 
 const Assignment = () => {
-  const [{ loading, error, users = [] }, { fetchMore }] = useUsers()
-
+  const [{ loading, error, users = []}, { fetchMore }] = useUsers()
+  
   const listRef = useRef()
 
   const handleUserClick = login => {
@@ -118,4 +118,4 @@ const Assignment = () => {
   )
 }
 
-export default Assignment
+export default Assignment;
