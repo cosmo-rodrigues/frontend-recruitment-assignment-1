@@ -86,7 +86,7 @@ const Assignment = () => {
       `You wiil be redirected to ${login}'s profile`,
     )
 
-    if (decision) window.location.assign = `https://github.com/${login}`
+    if (decision) window.location.href = `https://github.com/${login}`
   }
 
   useInfiniteScroll(listRef, fetchMore)
