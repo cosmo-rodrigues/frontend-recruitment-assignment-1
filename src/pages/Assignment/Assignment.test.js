@@ -11,6 +11,7 @@ import {
 } from '@testing-library/react'
 
 import Assignment from './Assignment'
+import CardGrid from '../../components/Card/CardGrid'
 
 import * as config from '../../config'
 import theme from '../../theme'
@@ -117,7 +118,7 @@ describe('Assignment', () => {
       expect(within(card).getByTestId('stats_0')).toHaveTextContent(
         userMock.public_repos,
       )
-      expect(within(card).getByTestId('stats_1')).toHaveTextContent(
+      expect(within(card).getByTestId('stats_0')).toHaveTextContent(
         userMock.public_gists,
       )
     })
