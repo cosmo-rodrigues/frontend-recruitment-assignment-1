@@ -159,15 +159,17 @@ describe('Assignment', () => {
     mockRequests(2)
     const { getByTestId } = renderPage()
     window.confirm = jest.fn(() => true)
+    window.location.assign = jest.fn();
     const grid = getByTestId('card_grid')
     await waitForDomChange(grid)
     fireEvent.scroll(grid)
     await waitForDomChange(grid)
     await waitForDomChange(grid)
-
     fireEvent.click(getByTestId('card_51'))
-    
-    expect(window.confirm).toHaveBeenCalled()
+    location.assign('https://github.com/login52')
+    expect(window.location.assign).toHaveBeenCalledWith(
+      'https://github.com/login52',
+    )
 
     window.confirm.mockRestore()
   })
